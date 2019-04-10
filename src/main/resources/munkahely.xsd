@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="carparckschema.xsd"/>
+    <xs:element name="Munkahely">
+   <xs:complexType>
+       <xs:all>
+           <xs:element name="Telephely" type="xs:string"/>
+           <xs:element name="Neve" type="xs:string"/>
+           <xs:element name="Adoszam" type="adoszam_type"/>
+           <xs:element name="Banszamlaszam"/>
+           <xs:element name="Tevekenysegi_Kore"/>
+           <xs:element name="Tulajdonos" type="szemely_type"/>
+           <xs:element name="Ceges_autoflotta" type="car_park_type"/>
+            <xs:element name="Dolgozok" type="dolgozo_type"/>
+       </xs:all>
+   </xs:complexType>
+
+</xs:element>
+<xs:complexType name="szemely_type">
+    <xs:all>
+        <xs:element name="Csaladnev"/>
+        <xs:element name="Keresztnev"/>
+        <xs:element name="Szuletesi_datum" type="xs:date"/>
+        <xs:element name="Anyja_neve"/>
+    </xs:all>
+</xs:complexType>
+
+    <xs:complexType name="dolgozo_type">
+        <xs:complexContent>
+            <xs:extension base="szemely_type">
+                <xs:all>
+                    <xs:element name="Munkaido"/>
+                    <xs:element name="Beosztas"/>
+                    <xs:element name="Szabadnapok"/>
+                    <xs:element name="Ceges_telefonszam"/>
+                    <xs:element name="Gyerekek_szama"/>
+                    <xs:element name="Cim"/>
+                    <xs:element name="Szep_kartya_szama"/>
+                </xs:all>
+
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="adoszam_type">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[1-9]\d{7}-\d-\d\d"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>

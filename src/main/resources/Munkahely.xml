@@ -1,0 +1,22 @@
+<?xml version='1.0' ?>
+<Munkahely xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="munkahely.xsd">
+<Tulajdonos>
+    <Csaladnev></Csaladnev>
+    <Keresztnev></Keresztnev>
+    <Szuletesi_datum>2018-05-02</Szuletesi_datum>
+    <Anyja_neve></Anyja_neve>
+</Tulajdonos>
+    <Dolgozok>
+        <Csaladnev></Csaladnev>
+        <Keresztnev></Keresztnev>
+        <Szuletesi_datum></Szuletesi_datum>
+        <Anyja_neve></Anyja_neve>
+        <Munkaido></Munkaido>
+        <Beosztas></Beosztas>
+        <Szabadnapok></Szabadnapok>
+        <Ceges_telefonszam></Ceges_telefonszam>
+        <Gyerekek_szama></Gyerekek_szama>
+        <Cim></Cim>
+        <Szep_kartya_szama></Szep_kartya_szama>
+    </Dolgozok>
+</Munkahely>

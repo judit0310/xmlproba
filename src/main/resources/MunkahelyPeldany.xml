@@ -1,0 +1,64 @@
+<?xml version='1.0' ?>
+
+<Munkahely xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="MunkahelyLeiras.xsd">
+
+    <Adoszam>21254125-2-51</Adoszam>
+<Tulajdonos>
+    <Vezeteknev></Vezeteknev>
+    <Keresztnev></Keresztnev>
+    <Szuletesi_datum></Szuletesi_datum>
+    <Szuletesi_hely></Szuletesi_hely>
+    <Anyja_neve></Anyja_neve>
+    <Szemelyazonosito_szam></Szemelyazonosito_szam>
+    <Neme></Neme>
+</Tulajdonos>
+<Dolgozok>
+    <Dolgozo>
+        <Vezeteknev></Vezeteknev>
+        <Keresztnev></Keresztnev>
+        <Szuletesi_datum></Szuletesi_datum>
+        <Szuletesi_hely></Szuletesi_hely>
+        <Anyja_neve></Anyja_neve>
+        <Szemelyazonosito_szam></Szemelyazonosito_szam>
+        <Neme></Neme>
+        <Munkaido></Munkaido>
+        <Beosztas></Beosztas>
+        <Szabadnapok></Szabadnapok>
+        <Ceges_telefonszam></Ceges_telefonszam>
+        <Gyerekek_szama></Gyerekek_szama>
+        <Cim></Cim>
+        <Szep_kartya_szama></Szep_kartya_szama>
+    </Dolgozo>
+</Dolgozok>
+    
+    <Gyakornokok>
+        <Gyakornok>
+            <Vezeteknev></Vezeteknev>
+            <Keresztnev></Keresztnev>
+            <Szuletesi_datum></Szuletesi_datum>
+            <Szuletesi_hely></Szuletesi_hely>
+            <Anyja_neve></Anyja_neve>
+            <Szemelyazonosito_szam></Szemelyazonosito_szam>
+            <Neme></Neme>
+            <Intezmeny></Intezmeny>
+            <Szak>Grafikus</Szak>
+            <Mentor>
+                <Vezeteknev></Vezeteknev>
+                <Keresztnev></Keresztnev>
+                <Szuletesi_datum></Szuletesi_datum>
+                <Szuletesi_hely></Szuletesi_hely>
+                <Anyja_neve></Anyja_neve>
+                <Szemelyazonosito_szam></Szemelyazonosito_szam>
+                <Neme>Kiscica</Neme>
+                <Munkaido></Munkaido>
+                <Beosztas></Beosztas>
+                <Szabadnapok></Szabadnapok>
+                <Ceges_telefonszam></Ceges_telefonszam>
+                <Gyerekek_szama></Gyerekek_szama>
+                <Cim></Cim>
+                <Szep_kartya_szama></Szep_kartya_szama>
+            </Mentor>
+        </Gyakornok>
+    </Gyakornokok>
+</Munkahely>

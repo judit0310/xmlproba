@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="Car" type="car"></xs:element>
+
+
+    <xs:complexType name="car">
+        <xs:sequence>
+
+            <xs:element name="manufacturer" type="xs:string" minOccurs="1" />
+            <xs:element name="model" type="xs:string"/>
+            <xs:element name="price" type="xs:string"/>
+            <xs:element name="engine" type="engine_type" nillable="true" />
+            <xs:element name="fuel" type="xs:string" />
+            <xs:element name="age" type="xs:integer"/>
+            <xs:element name="mileage" type="xs:string" />
+            <xs:element name="type" type="xs:string" />
+            <xs:element name="number_of_doors" type="xs:integer" />
+            <xs:element name="MOT">
+
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="year" type="xs:integer"/>
+                        <xs:element name="month" type="xs:integer"/>
+                        <xs:element name="day" type="xs:integer"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="colour" type="xs:string"/>
+            <xs:element name="transmission" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+<xs:simpleType name="engine_type">
+    <xs:restriction base="xs:string" >
+
+    </xs:restriction>
+</xs:simpleType>
+</xs:schema>

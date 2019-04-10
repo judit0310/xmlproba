@@ -1,0 +1,18 @@
+<Car>
+  <manufacturer>string</manufacturer>
+  <model>string</model>
+  <price>string</price>
+  <engine>string</engine>
+  <fuel>string</fuel>
+  <age>100</age>
+  <mileage>string</mileage>
+  <type>string</type>
+  <number_of_doors>100</number_of_doors>
+  <MOT>
+    <year>100</year>
+    <month>100</month>
+    <day>100</day>
+  </MOT>
+  <colour>string</colour>
+  <transmission>string</transmission>
+</Car>

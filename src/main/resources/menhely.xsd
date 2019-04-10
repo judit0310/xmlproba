@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+ <xs:element name="menhely">
+     <xs:complexType>
+         <xs:sequence>
+             <xs:element name="neve" type="xs:string"/>
+             <xs:element name="telephelye" type="xs:string"/>
+             <xs:element name="ferohelyek_szama" type="ferohely_type"/>
+             <xs:element name="adoszam" type="adoszam_type"/>
+             <xs:element name="kiskutyak">
+                 <xs:complexType>
+                     <xs:sequence>
+                     <xs:element name="kutyus" type="kutyus" maxOccurs="unbounded"/>
+                 </xs:sequence>
+                 </xs:complexType>
+             </xs:element>
+         </xs:sequence>
+     </xs:complexType>
+
+ </xs:element>
+    
+    
+    
+    <xs:simpleType name="ferohely_type">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="adoszam_type">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[1-9]\d{7}-\d-\d\d"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="neme_type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="szuka"/>
+            <xs:enumeration value="kan"/>
+            <xs:enumeration value="IDK"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name = "kutyus">
+        <xs:sequence>
+            <xs:element name="neve" type="xs:string"/>
+            <xs:element name="kora" type="kor" />
+            <xs:element name="fajta" type="xs:string"/>
+            <xs:element name="nem" type="neme_type"/>
+            <xs:element name="ivartalanitva" type="xs:boolean"/>
+            <xs:element name="szine" maxOccurs="3" type="xs:string"/>
+            <xs:element name="mikrochip_szama" type="mikrochip_type"/>
+            <xs:element name="allatutlevel_szama" nillable="true" type="xs:positiveInteger"/>
+
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="mikrochip_type">
+        <xs:restriction base="xs:integer">
+            <xs:totalDigits value="15"/>
+            <xs:minInclusive value="100000000000000"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="kor">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+            <xs:maxInclusive value="120"/>
+            <xs:totalDigits value="3"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="nem">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="szuka"/>
+            <xs:enumeration value="kan"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="mikrochip_szama">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{3}-[0-9]{5}"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

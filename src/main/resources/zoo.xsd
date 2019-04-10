@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="allatkert">
+    <xs:complexType>
+        <xs:all maxOccurs="1">
+            <xs:element name="neve"/>
+            <xs:element name="cime"/>
+            <xs:element name="telefonszam"/>
+            <xs:element name="tulajdonosok"/>
+            <xs:element name="nyitvatartasok"/>
+            <xs:element name="belepok" >
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="belepo" type="belepok_type" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="adoszam" type="adoszam_type"/>
+            <xs:element name="kifutok">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="kifuto" type="kifuto_type" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:all>
+    </xs:complexType>
+</xs:element>
+
+    <xs:complexType name="kifuto_type">
+        <xs:all>
+            <xs:element name="ferohely"/>
+            <xs:element name="tematika"/>
+            <xs:element name="felelos"/>
+            <xs:element name="meret"/>
+            <xs:element name="azonosito"/>
+            <xs:element name="tipus"/>
+            <xs:element name="etetesi_ido"/>
+            <xs:element name="telepites_eve"/>
+            <xs:element name="utolso_karbantartas_datuma"/>
+            <xs:element name="allatok">
+            <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="allat"  maxOccurs="unbounded">
+                 <xs:complexType>
+                <xs:choice >
+                    <xs:element name="fiu_hullo" type="allat_type" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="lany_hullo" type="lany_hullo_type" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="fiu_emlos" type="emlos_type" minOccurs="0"/>
+                    <xs:element name="lany_emlos" type="lany_emlos_type"/>
+                    <xs:element name="madar" type="madar_type" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:choice>
+                 </xs:complexType>
+                        </xs:element>
+
+                    </xs:sequence>
+            </xs:complexType>
+
+        </xs:element>
+
+        </xs:all>
+    </xs:complexType>
+<xs:complexType name="allat_type">
+    <xs:all>
+        <xs:element name="faj"/>
+        <xs:element name="latin_neve"/>
+        <xs:element name="neve"/>
+        <xs:element name="orokbefogado"/>
+        <xs:element name="kor"/>
+        <xs:element name="elettortenet"/>
+        <xs:element name="taplalek"/>
+    </xs:all>
+</xs:complexType>
+
+<xs:complexType name="lany_hullo_type">
+    <xs:complexContent>
+        <xs:extension base="allat_type">
+                        <xs:all>
+                            <xs:element name="tojasok_szama"/>
+                        </xs:all>
+        </xs:extension>
+
+    </xs:complexContent>
+</xs:complexType>
+
+    <xs:complexType name="emlos_type">
+        <xs:complexContent>
+            <xs:extension base="allat_type">
+                <xs:all>
+                    <xs:element name="szor_szine"/>
+                </xs:all>
+            </xs:extension>
+
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="lany_emlos_type">
+        <xs:complexContent>
+            <xs:extension base="emlos_type">
+                <xs:all>
+                    <xs:element name="vemhes" type="xs:boolean"/>
+                </xs:all>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+
+    <xs:complexType name="madar_type">
+        <xs:complexContent>
+            <xs:extension base="allat_type">
+                <xs:all>
+                    <xs:element name="szarnyfesz_tavolsag" />
+                    <xs:element name="toll_szine"/>
+                </xs:all>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:simpleType name="adoszam_type">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[1-9]\d{7}-\d-\d\d"/>
+        </xs:restriction>
+    </xs:simpleType>
+<xs:complexType name="belepok_type">
+    <xs:sequence>
+        <xs:element name="ar"/>
+    <xs:element name="celszemely">
+<xs:simpleType>
+    <xs:restriction>
+        <xs:enumeration value="gyerek"/>
+        <xs:enumeration value="diak"/>
+        <xs:enumeration value="felnott"/>
+        <xs:enumeration value="nyugdijas"/>
+    </xs:restriction>
+</xs:simpleType>
+    </xs:element> </xs:sequence>
+</xs:complexType>
+</xs:schema>

@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="carparckschema.xsd"/>
+    <xs:element name="Munkahely">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="Telephely"/>
+                <xs:element name="Neve" type="xs:string"/>
+                <xs:element name="Adoszam" type="adoszam_type"/>
+                <xs:element name="Bankszamlaszam" />
+                <xs:element name="Tevekenysegi_kor"/>
+                <xs:element name="Tulajdonos" type="szemely_type"/>
+                <xs:element name="Ceges_Autoflotta" type="car_park_type"/>
+                <xs:element name="Dolgozok" type="dolgozok_type"/>
+                <xs:element name="Gyakornokok">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Gyakornok" type="gyakornok_type"
+                                        minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:simpleType name="adoszam_type">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[1-9]\d{7}-\d-\d\d"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:complexType name="szemely_type">
+        <xs:all>
+            <xs:element name="Vezeteknev"/>
+            <xs:element name="Keresztnev"/>
+            <xs:element name="Szuletesi_datum"/>
+            <xs:element name="Szuletesi_hely"/>
+            <xs:element name="Anyja_neve"/>
+            <xs:element name="Szemelyazonosito_szam"/>
+            <xs:element name="Neme" type="nem_type"/>
+        </xs:all>
+    </xs:complexType>
+
+
+    <xs:complexType name="dolgozo_type">
+        <xs:complexContent>
+            <xs:extension base="szemely_type">
+                <xs:all>
+                    <xs:element name="Munkaido"/>
+                    <xs:element name="Beosztas"/>
+                    <xs:element name="Szabadnapok"/>
+                    <xs:element name="Ceges_telefonszam"/>
+                    <xs:element name="Gyerekek_szama"/>
+                    <xs:element name="Cim"/>
+                    <xs:element name="Szep_kartya_szama"/>
+                </xs:all>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="dolgozok_type">
+        <xs:sequence>
+            <xs:element name="Dolgozo" type="dolgozo_type"
+                        minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:complexType name="gyakornok_type">
+        <xs:complexContent>
+            <xs:extension base="szemely_type">
+                <xs:all>
+                    <xs:element name="Intezmeny"/>
+                    <xs:element name="Szak" type="szak_type"/>
+                    <xs:element name="Mentor" type="dolgozo_type"/>
+                </xs:all>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+
+    <xs:simpleType name="nem_type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Ferfi"/>
+            <xs:enumeration value="No"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="szak_type">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Programtervezo informatikus"/>
+            <xs:enumeration value="Anglisztika"/>
+            <xs:enumeration value="Gazdasági informatikus"/>
+            <xs:enumeration value="Edzo"/>
+            <xs:enumeration value="Tanar"/>
+            <xs:enumeration value="Ovodapedagogus"/>
+            <xs:enumeration value="Grafikus"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

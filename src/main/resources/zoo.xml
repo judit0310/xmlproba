@@ -1,0 +1,58 @@
+<?xml version='1.0' ?>
+
+<allatkert xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="zoo.xsd">
+    <cime></cime>
+    <belepok>
+        <belepo>
+            <ar></ar>
+            <celszemely></celszemely>
+        </belepo>
+        <belepo>
+            <ar></ar>
+            <celszemely></celszemely>
+        </belepo>
+    </belepok>
+
+    <kifutok>
+
+        <kifuto>
+            <ferohely></ferohely>
+            <tematika></tematika>
+            <felelos></felelos>
+            <meret></meret>
+            <azonosito></azonosito>
+            <tipus></tipus>
+            <etetesi_ido></etetesi_ido>
+            <telepites_eve></telepites_eve>
+            <utolso_karbantartas_datuma></utolso_karbantartas_datuma>
+            <allatok>
+               <allat>
+                   <lany_hullo>
+                       <faj></faj>
+                       <latin_neve></latin_neve>
+                       <neve></neve>
+                       <orokbefogado></orokbefogado>
+                       <kor></kor>
+                       <elettortenet></elettortenet>
+                       <taplalek></taplalek>
+                       <tojasok_szama></tojasok_szama>
+                   </lany_hullo>
+               </allat>
+                <allat>
+                    <lany_emlos>
+                        <faj></faj>
+                        <latin_neve></latin_neve>
+                        <neve></neve>
+                        <orokbefogado></orokbefogado>
+                        <kor></kor>
+                        <elettortenet></elettortenet>
+                        <taplalek></taplalek>
+                        <szor_szine></szor_szine>
+                        <vemhes></vemhes>
+                    </lany_emlos>
+                </allat>
+            </allatok>
+        </kifuto>
+    </kifutok>
+</allatkert>

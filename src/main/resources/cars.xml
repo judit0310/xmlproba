@@ -1,0 +1,96 @@
+<?xml version='1.0' ?>
+<car_park  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="carparckschema.xsd">
+<car>
+    <manufacturer></manufacturer>
+    <model></model>
+    <price></price>
+    <engine xsi:nil="true"></engine>
+    <fuel></fuel>
+    <age></age>
+    <mileage></mileage>
+    <type></type>
+    <number_of_doors></number_of_doors>
+    <MOT>
+        <year></year>
+        <month></month>
+        <day></day>
+    </MOT>
+    <colour></colour>
+    <transmission></transmission>
+</car>
+    <car>
+        <manufacturer></manufacturer>
+        <model></model>
+        <price></price>
+        <engine>5.22</engine>
+        <fuel></fuel>
+        <age></age>
+        <mileage></mileage>
+        <type></type>
+        <number_of_doors></number_of_doors>
+        <MOT>
+            <year></year>
+            <month></month>
+            <day></day>
+        </MOT>
+        <colour></colour>
+        <transmission></transmission>
+    </car>
+
+    <car>
+        <manufacturer>Chevrolet</manufacturer>
+        <model>Kalos</model>
+        <price>700000 HUF</price>
+        <engine>1.2</engine>
+        <fuel>petrol</fuel>
+        <age>14</age>
+        <mileage>74000 km</mileage>
+        <type>hatchback</type>
+        <number_of_doors>5</number_of_doors>
+        <MOT>
+            <year>2020</year>
+            <month>01</month>
+            <day>28</day>
+        </MOT>
+        <colour>blue</colour>
+        <transmission>IDK</transmission>
+    </car>
+
+    <car>
+        <manufacturer>Citröen</manufacturer>
+        <model>Xsara</model>
+        <price>500000 HUF</price>
+        <engine>1.4</engine>
+        <fuel>petrol</fuel>
+        <age>15</age>
+        <mileage>140000 km</mileage>
+        <type>wagon</type>
+        <number_of_doors>5</number_of_doors>
+        <MOT>
+            <year>2021</year>
+            <month>05</month>
+            <day>18</day>
+        </MOT>
+        <colour>silver</colour>
+        <transmission>IDK</transmission>
+    </car>
+<car>
+    <manufacturer></manufacturer>
+    <model></model>
+    <price></price>
+    <engine>1.69</engine>
+    <fuel></fuel>
+    <age></age>
+    <mileage></mileage>
+    <type></type>
+    <number_of_doors>5</number_of_doors>
+    <MOT>
+        <year></year>
+        <month></month>
+        <day></day>
+    </MOT>
+    <colour></colour>
+    <transmission></transmission>
+</car>
+
+</car_park>

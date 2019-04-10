@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="carschema.xsd"/>
+    <xs:element name="car_park" type="car_park_type"/>
+
+        <xs:complexType name="car_park_type">
+            <xs:sequence>
+                <xs:element name="car" type="car" minOccurs="0" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+</xs:schema>

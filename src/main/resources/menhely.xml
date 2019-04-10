@@ -1,0 +1,31 @@
+<?xml version='1.0' ?>
+
+<menhely  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="menhely.xsd">
+
+    <neve></neve>
+    <telephelye></telephelye>
+    <ferohelyek_szama>89</ferohelyek_szama>
+    <adoszam>12346578-1-12</adoszam>
+   <kiskutyak>
+       <kutyus>
+           <neve>Bodru</neve>
+           <kora>3</kora>
+           <fajta>Puli</fajta>
+           <nem>kan</nem>
+           <ivartalanitva>true</ivartalanitva>
+           <szine>kek</szine>
+           <mikrochip_szama>112345678912346</mikrochip_szama>
+           <allatutlevel_szama>1</allatutlevel_szama>
+       </kutyus>
+       <kutyus>
+           <neve>Mici</neve>
+           <kora>18</kora>
+           <fajta>Német juhász</fajta>
+           <nem>IDK</nem>
+           <ivartalanitva>false</ivartalanitva>
+           <szine></szine>
+           <mikrochip_szama>112345678912346</mikrochip_szama>
+           <allatutlevel_szama xsi:nil="true"></allatutlevel_szama>
+       </kutyus>
+   </kiskutyak>
+</menhely>
